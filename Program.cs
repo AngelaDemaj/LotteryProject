@@ -41,18 +41,17 @@ namespace LotteryProject
             return choice;
         }
 
-
         static void Main(string[] args)
         {
             Console.WriteLine("Choose the amount of numbers you want to pick:");
-            var userInput = int.Parse(Console.ReadLine());
+            var userInput = ValidateInt(1, 12, Console.ReadLine());
 
             var userNumbers = new HashSet<int>();
 
             while (userNumbers.Count < userInput)
             {
                 Console.WriteLine("Enter a number!");
-                var userNumber = int.Parse(Console.ReadLine());
+                var userNumber = ValidateInt(1, 80, Console.ReadLine());
 
                 userNumbers.Add(userNumber);
             }

@@ -6,7 +6,8 @@ namespace LotteryProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Choose the amount of numbers you want to pick:");
+            var userInput = int.Parse(Console.ReadLine());
         }
     }
 }
